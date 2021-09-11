@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputPhysics;
+    let inputChemistry;
+    let inputBiological;
+    inputPhysics = prompt("Nhập điểm vật lý");
+    inputChemistry = prompt("Nhập điểm hóa");
+    inputBiological = prompt("Nhập điểm sinh");
+    let Physics = parseInt(inputPhysics);
+    let Chemistry = parseInt(inputChemistry);
+    let Biological = parseInt(inputBiological);
+    let average = (Physics + Chemistry + Biological) / 3;
+    let total = Physics + Chemistry + Biological;
+    alert("Điểm trung bình: " + average + "\nTổng điểm 3 môn học: " + total);
+
+
+</script>
+</body>
+</html>
