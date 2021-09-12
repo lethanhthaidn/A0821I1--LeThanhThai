@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input type="text" id="num1">
+<input type="text" id="num2">
+<br><br>
+<button onclick="caculate1()">Cộng</button>
+<button onclick="caculate2()">Trừ</button>
+<button onclick="caculate3()">Nhân</button>
+<button onclick="caculate4()">Chia</button>
+
+<h3>Kết quả:</h3>
+<p id="result">...</p>
+
+</body>
+<script>
+
+    function caculate1() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result;
+        number1 = parseInt(number1);
+        number2 = parseInt(number2);
+        result = number1 + number2;
+        document.getElementById("result").innerText = result;
+    }
+
+    function caculate2() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result;
+        result = number1 - number2;
+        document.getElementById("result").innerText = result;
+    }
+
+    function caculate3() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result;
+        result = number1 * number2;
+        document.getElementById("result").innerText = result;
+    }
+
+    function caculate4() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result;
+        result = number1 / number2;
+        document.getElementById("result").innerText = result;
+    }
+</script>
+</html>

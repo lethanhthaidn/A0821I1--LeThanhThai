@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính chu vi hình tròn</h1>
+<label>Nhập đường kính hình tròn:</label><input id="num" type="text">
+<button onclick="calculate()">Tính toán</button>
+<h4>Kết quả:</h4>
+<p id="result">0</p>
+<script>
+    function calculate() {
+        let inputD;
+        inputD = document.getElementById("num").value;
+        let D = parseInt(inputD);
+        const pi = 3.14;
+        let C = D * pi;
+        document.getElementById("result").innerText = C;
+    }
+</script>
+</body>
+</html>
