@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+    <style>
+        table{
+            background: url("https://www.cato.org/sites/cato.org/files/styles/optimized/public/2021-01/GettyImages-1226985345.jpg?itok=f9SULHjG");
+            border:5px solid;
+            width:200px;
+
+        }
+        button{
+            padding:20px;
+            height:55px;
+            text-align: center;
+            background-color: blanchedalmond;
+
+        }
+        #a {
+            border:5px solid;
+            text-align: left;
+            height: 50px;
+            background-color: aquamarine;
+
+        }
+    </style>
+</head>
+<body>
+<table cellspacing="20px">
+    <tr>
+        <td id="a" colspan="4">
+            <span id="result"></span>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <button onclick="call(1)">1</button>
+        </td>
+        <td>
+            <button onclick="call(2)">2</button>
+        </td>
+        <td>
+            <button onclick="call(3)">3</button>
+        </td>
+        <td>
+            <button onclick="call('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="call(4)">4</button>
+        </td>
+        <td>
+            <button onclick="call(5)">5</button>
+        </td>
+        <td>
+            <button onclick="call(6)">6</button>
+        </td>
+        <td>
+            <button onclick="call('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="call(7)">7</button>
+        </td>
+        <td>
+            <button onclick="call(8)">8</button>
+        </td>
+        <td>
+            <button onclick="call(9)">9</button>
+        </td>
+        <td>
+            <button onclick="call('*')">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="call('C')">C</button>
+        </td>
+        <td>
+            <button onclick="call(0)">0</button>
+        </td>
+        <td>
+            <button onclick="call('=')">=</button>
+        </td>
+        <td>
+            <button onclick="call('/')">/</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function call(input) {
+        let result = document.getElementById("result").innerText;
+        switch (input){
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case '+':
+            case '-':
+            case '*':
+            case '/':
+                result= result + input;
+                break;
+            case'=':
+                result = eval(result);
+                break;
+            case 'C':
+                result = "";
+
+        }
+        document.getElementById("result").innerText = result;
+    }
+</script>
+</body>
+</html>
