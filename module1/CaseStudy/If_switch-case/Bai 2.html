@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự</title>
+
+</head>
+<body>
+<h3>Nhập chữ cái muốn kiểm tra:</h3>
+<input id="word" type="text">
+<button onclick="check()">Kiểm tra</button>
+<h3 id="result"></h3>
+<script>
+    function check() {
+        let alphabet = document.getElementById("word").value;
+        switch (alphabet) {
+            case 'o':
+            case 'u':
+            case 'a':
+            case 'i':
+            case 'e':
+            case 'O':
+            case 'U':
+            case 'I':
+            case 'A':
+            case 'E':
+                document.getElementById("result").innerText = alphabet + ": là Nguyên âm";
+                break;
+            default:
+                document.getElementById("result").innerText = alphabet + ": là Phụ âm";
+        }
+    }
+</script>
+</body>
+</html>

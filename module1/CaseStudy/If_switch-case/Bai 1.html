@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tính lương</title>
 </head>
 <body>
-$END$
+<form>
+    <label>Nhập tiền lương của bạn: </label>
+    <input id="salary" type="text"><br>
+    <button type="button" onclick="convert()">Tính toán</button>
+    <button type="reset" onclick="re()">Đặt lại</button>
+    <h3 id="tax">Tiền thuế là: </h3>
+    <h3 id="money">Lương sau thuế là: </h3>
+</form>
+<script>
+    function convert() {
+        let num = parseInt(document.getElementById("salary").value);
+        let tax;
+        let money;
+        if (num >= 15) {
+            tax = (num * 20) / 100;
+            money = num - tax;
+        } else if (num >= 7) {
+            tax = (num * 15) / 100;
+            money = num - tax;
+        } else {
+            tax = (num * 5) / 100;
+            money = num - tax;
+        }
+        document.getElementById("tax").innerText = "Tiền thuế là: " + tax;
+        document.getElementById("money").innerText = "Lương sau thuế là: " + money;
+    }
+
+    function re() {
+        //document.getElementById("salary").innerText = " ";
+        document.getElementById("tax").innerText = "Tiền thuế là: ";
+        document.getElementById("money").innerText = "Lương sau thuế là: ";
+    }
+</script>
 </body>
 </html>
