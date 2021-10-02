@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lấy thông tin nhiệt độ</title>
+</head>
+<body>
+<script>
+    let temperature
+    do {
+        temperature = prompt("Nhập nhiệt độ : ");
+        if (temperature < 20) {
+            alert("Nhiệt độ quá thấp hãy tăng lên !!!");
+        } else if (temperature > 100) {
+            alert("Nhiệt độ quá cao hãy hạ xuống !!!");
+        } else {
+            alert("Nhiệt độ ổn định !!!");
+        }
+    } while (temperature < 20 || temperature > 100);
+
+
+</script>
+</body>
+</html>

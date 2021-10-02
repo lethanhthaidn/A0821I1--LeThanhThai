@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+  <h3>MENU</h3>
+  <ol>
+    <li>Cafe : 20.000vnd</li>
+    <li>Cam vắt : 25.000vnd</li>
+    <li>Nước ép cà rốt : 20.000vnd</li>
+    <li>Nước ép cà chua : 20.000vnd</li>
+    <li>Nước lọc : 10.000vnd</li>
+    <li>Nước dừa : 35.000vnd</li>
+    <li>Thoát gọi món</li>
+  </ol>
+
+</form>
+<script>
+  let value
+  do {
+    value = parseInt(prompt("Nhập số lượng đồ uống cần mua"));
+  } while (value > 7)
+  let arr = Array(value);
+  let a = [1, 2, 3, 4, 5, 6];
+  let b = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+  let c = ["20.000vnd", "25.000vnd", "20.000vnd", "20.000vnd", "10.000vnd", "35.000vnd"];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = parseInt(prompt("Đồ uống [" + (i + 1) + "]= "));
+    if (a[i] === arr[i]) {
+      arr[i] = b[i];
+      alert(arr);
+    }
+  }
+</script>
+</body>
+</html>

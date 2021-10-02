@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numArr = parseInt(prompt("Nhập số phần tử của mảng : "));
+    let arr = Array(numArr);
+    let t = 0;
+    for (let i = 0; i < numArr; i++) {
+        arr[i] = parseInt(prompt("arr[" + (i + 1) + "]="));
+        t = t + arr[i];
+        arr[i] = t;
+    }
+    document.write("Kết quả prefixSums là : " +arr);
+</script>
+</body>
+</html>

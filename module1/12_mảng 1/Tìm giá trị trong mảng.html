@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị </title>
+</head>
+<body>
+<script>
+
+    let arr = [0, 10, 20, 30, 40, 50, 60];
+    let check = false
+    while (check === false) {
+        let value = prompt("Nhập số : ");
+        for (let i = 0; i < arr.length; i++) {
+
+            if (value == arr[i]) {
+                check = true;
+                alert("value " + arr[i] + " found at " + i);
+            }
+        }
+        if (check === false) {
+            alert(" not value ");
+        }
+    }
+
+</script>
+</body>
+</html>

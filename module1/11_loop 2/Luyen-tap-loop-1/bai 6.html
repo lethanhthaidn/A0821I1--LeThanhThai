@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tổng 30 số tự nhiên đầu tiên chia hết cho 7
+    </title>
+</head>
+<body>
+<script>
+
+    let sum = 0;
+    for (let i = 0; i <= 7 * 30; i++) {
+        if (i % 7 === 0) {
+            document.write(i + " ");
+            sum += i;
+        }
+    }
+    document.write("<br>" + "tổng 30 số đầu tiên là: " + sum);
+</script>
+</body>
+</html>
