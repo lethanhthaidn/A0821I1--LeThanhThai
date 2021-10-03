@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<form>
+    <h3>Từ Điển</h3>
+    <label for="voca">Nhập vào đây</label>
+    <input type="text" placeholder="Nhập từ cần dịch " id="voca">
+    <button type="button" onclick="convert()">Dịch</button>
+    <button type="reset" onclick="set()">Nhập lại</button>
+    <h3 id="result">Kết quả</h3>
+</form>
+<script>
+    function convert() {
+        let input = document.getElementById("voca").value;
+        let eng = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+        let vn = ["một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "mười"];
+        let result = ""
+
+        for (let i = 0; i < eng.length; i++) {
+            if (eng[i] === input) {
+                result = eng[i] + " là " + vn[i];
+
+                document.getElementById("result").innerHTML = "Kết quả : " + "<br>" + result;
+                break;
+            } else {
+                document.getElementById("result").innerHTML ="Kết quả : " + "<br>" + "Không tìm thấy !!! ";
+            }
+        }
+    }
+    function set() {
+        document.getElementById("result").innerHTML = "Kết quả : "
+    }
+
+
+
+</script>
+</body>
+</html>

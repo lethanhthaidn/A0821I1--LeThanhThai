@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myColor = parseInt(prompt("Nhập số lượng màu sắc bạn yêu thích !!! "));
+    let arrColor = Array(myColor);
+    for (let i = 0; i < arrColor.length; i++) {
+        arrColor[i] = prompt("arrColor [" + (i + 1) + "]=");
+    }
+    document.write(arrColor.toString() + "<br>");
+    document.write(arrColor.join("-") + "<br>");
+    document.write(arrColor.join("_"));
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số lượng phần tử A !!!"));
+    let b = parseInt(prompt("Nhập số lượng phần tử B !!!"));
+    let arr1 = Array(a);
+    let arr2 = Array(b);
+    let check = true
+    for (let i = 0; i < arr1.length; i++) {
+        arr1[i] = prompt("[Kí tự][A][" + (i + 1) + "]= ");
+    }
+    for (let i = 0; i < arr2.length; i++) {
+        arr2[i] = prompt("[Kí tự][B][" + (i + 1) + "]= ");
+    }
+    for (let i = 0; i < (arr1 + arr2).length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            check = false
+            document.write("Hai chuỗi A và B không giống nhau !!!");
+            break;
+        }
+    }
+    if (check === true) {
+        document.write("Hai chuỗi A và B giống nhau !!!");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = parseInt(prompt("Nhập số lượng phần tử !!!"));
+    let arr = Array(value);
+    let result1 = [];
+    let result2 = [];
+    let result3 = [];
+    let result4 = [];
+    let count1 = 0;
+    let count2 = 0;
+    let count3 = 0;
+    let count4 = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("Nhập số : [" + (i + 1) + "]= "));
+        if (arr[i] < 0) {
+            result1[count1] = arr[i];
+            count1++;
+        } else {
+            result2[count2] = arr[i];
+            count2++
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (result1[i] !== result1[i + 1]) {
+            result3[count3] = result1[i];
+            count3++;
+        }
+        if (result2[i] !== result2[i + 1]) {
+            result4[count4] = result2[i];
+            count4++;
+        }
+    }
+    document.write("Dãy số vừa nhập : " + ( result1 + "," + result2) + "<br>");
+    document.write("Các số nguyên âm : " + result3.sort() + "<br>");
+    document.write("Các số nguyên dương : " + result4.sort());
+
+</script>
+</body>
+</html>

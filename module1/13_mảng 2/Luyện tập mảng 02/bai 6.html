@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số lượng kí tự !!!"));
+    let arr = Array(a);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("[Kí tự][" + (i + 1) + "]= ");
+    }
+    document.write("Dãy số vừa nhập là : " + arr + "<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === "-") {
+            arr[i] = "_"
+        }
+    }
+    document.write("Dãy số sau thay đổi : " + arr);
+
+</script>
+</body>
+</html>

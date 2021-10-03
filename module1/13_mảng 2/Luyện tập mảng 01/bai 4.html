@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = parseInt(prompt("Nhập số lượng phần tử !!!"));
+    let arrVa = Array(value);
+    let arrBa = arrVa
+    let x = 0;
+    let y = arrBa.length - 1;
+    for (let i = 0; i < arrVa.length; i++) {
+        arrVa[i] = parseInt(prompt("Nhập sô : [" + (i + 1) + "]= "));
+    }
+    document.write("Dãy số vừa nhập : " + arrVa + "<br>");
+    // while (x < y) {
+    //     let a = arrBa[x];
+    //     arrBa[x] = arrBa[y];
+    //     arrBa[y] = a;
+    //     x++;
+    //     y--;
+    // }
+
+    document.write("Dãy số đảo ngược : " + arrBa.reverse() + "");
+
+
+</script>
+</body>
+</html>

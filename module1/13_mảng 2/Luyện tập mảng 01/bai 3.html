@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = parseInt(prompt("Nhập số lượng phần tử !!!"));
+    let arrVa = Array(value);
+    let max = [];
+    let sum = 0;
+    let result = 0;
+    for ( let i =0;i < arrVa.length;i++) {
+        arrVa[i] = parseInt(prompt("Nhập số : [" + (i + 1) + "]= "));
+        if ( arrVa[i] > max) {
+            max = arrVa[i];
+            sum += arrVa[i]
+            result = sum / value;
+        }
+    }
+    document.write("Số lớn nhất trong mảng là : " + max + "<br>");
+    document.write("Trung bình : " + result);
+</script>
+</body>
+</html>

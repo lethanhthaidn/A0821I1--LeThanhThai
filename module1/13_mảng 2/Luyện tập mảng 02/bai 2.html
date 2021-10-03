@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số lượng kí tự !!!"));
+    let arr = Array(a);
+    // let x = 0;
+    // let y = arr.length - 1;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("[Kí tự][" + (i + 1) + "]= ");
+    }
+    document.write("Dãy kí tự vừa nhập : " + arr + "<br>");
+    document.write("Dãy kí tự đảo ngược : " + arr.reverse());
+</script>
+</body>
+</html>
