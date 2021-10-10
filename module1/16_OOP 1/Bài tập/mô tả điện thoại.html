@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Moblie {
+        constructor(name, battery, memoryArea1, memoryArea2, memoryArea3) {
+            this.name = name;
+            this.battery = battery;
+            this.receivedMessage = [];
+            this.sentMessage = [];
+            this.memoryArea3 = memoryArea3;
+        }
+
+        checkOnOff() {
+            if (this.battery > 0) {
+                document.write(" đang bật !" + "<br>");
+                return true;
+            } else {
+                document.write("Điện thoại đang tắt !")
+                return false;
+            }
+        }
+
+        soanTinNhan() {
+
+            document.write(" Đang soạn tin nhắn ");
+        }
+        showMess() {
+            document.write("<hr>" + " Nội dung tin nhắn của " + nokia.getTen() + " gửi cho " + iphone.getTen() + " là : " + "<b>Đi nhậu không bạn êi ?</b>");
+        }
+
+        guiTinNhan(text) {
+            this.sentMessage.push(text);
+            iphone.nhanTinDen(text)
+            document.write(" Đã gửi tin nhắn cho " + iphone.getTen() + nokia.sentMessage);
+        }
+        nhanTinDen(text2) {
+            this.receivedMessage.push(text2)
+
+        }
+        xemTinDen() {
+            document.write(" Đã đọc tin nhắn từ " + nokia.getTen());
+
+        }
+        xemTinGui() {
+            document.write(" Kiểm tra tin nhắn đã được gửi đi !");
+
+        }
+        afterUse() {
+            document.write(" ------đã dùng 1 chức năng pin còn : " + --this.battery + "%" + "<br>");
+
+        }
+        getTen() {
+            return this.name
+        }
+
+    }
+    let nokia = new Moblie("Nokia",50,100,100,100);
+    let iphone = new Moblie("Iphone",70,100,100,100);
+    document.write("Điện thoại " + nokia.getTen() + " dung lượng pin " +  nokia.battery + "%");
+    nokia.checkOnOff();
+    document.write("Điện thoại " + nokia.getTen());
+    nokia.soanTinNhan();
+    nokia.afterUse();
+    document.write("Điện thoại " + nokia.getTen());
+    nokia.guiTinNhan("<b> Đi nhậu không bạn êi ?</b>");
+    nokia.afterUse();
+    document.write("Điện thoại " + nokia.getTen());
+    nokia.xemTinGui();
+    nokia.afterUse();
+
+    document.write("<hr>" + "Điện thoại " + iphone.getTen() + " dung lượng pin " +  iphone.battery + "%");
+    iphone.checkOnOff();
+    document.write("Điện thoại " + iphone.getTen());
+    document.write(" đã nhận được tin nhắn từ " + nokia.getTen() + iphone.receivedMessage);
+    iphone.afterUse();
+    document.write("Điện thoại " + iphone.getTen());
+    iphone.xemTinDen();
+    iphone.afterUse();
+    iphone.showMess();
+
+</script>
+</body>
+</html>

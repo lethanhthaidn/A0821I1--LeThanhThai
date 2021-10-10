@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function snt() {
+        let num = parseInt(prompt("nhập vào số muốn muốn kiểm tra: "));
+        let check = true;
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check === true) {
+            alert("la snt");
+        } else {
+            alert("k phai la snt");
+        }
+    }
+    snt();
+</script>
+</body>
+</html>

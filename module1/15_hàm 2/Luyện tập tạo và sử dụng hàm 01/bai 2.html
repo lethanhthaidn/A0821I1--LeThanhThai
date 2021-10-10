@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input oninput="doiSo()" id="num">
+<br>
+<p id="result"></p>
+<script>
+
+function doiSo(){
+    let x = parseInt(document.getElementById("num").value);
+    x+=1;
+    document.getElementById("result").innerText = x;
+}
+
+
+</script>
+</body>
+</html>

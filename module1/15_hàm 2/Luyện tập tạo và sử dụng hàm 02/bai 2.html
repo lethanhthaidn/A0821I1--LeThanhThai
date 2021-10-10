@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Diện tích hình tròn</label><br>
+Đường kính:<input type="number" oninput="area()" id="num1">
+<p>Kết quả: <span id="result1"></span></p>
+<p>--------------</p>
+<label>Chu vi hình tròn</label><br>
+Đường kính <input id="num2" type="number" oninput="perimeter()">
+<p>kêt quả:<span id="result2"></span></p>
+<script>
+    function area() {
+        let D = parseInt(document.getElementById("num1").value);
+        let S = ((D*D) / 4) * 3.14;
+        document.getElementById("result1").innerText = S;
+    }
+
+    function perimeter() {
+        let d = parseInt(document.getElementById("num2").value);
+        let C = d * 3.14;
+        document.getElementById("result2").innerText = C ;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Square of <input type="number" id="number" oninput="newSquare()"> is: <span id="result"></span>
+<script>
+    function square(num){
+        return num*num;
+    }
+    function newSquare(){
+        let newNum = parseInt(document.getElementById("number").value);
+        let result = square(newNum);
+        document.getElementById("result").innerHTML=result;
+    }
+</script>
+</body>
+</html>

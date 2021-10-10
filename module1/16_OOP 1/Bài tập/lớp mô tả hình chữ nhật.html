@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid darkslategray;"></canvas><br>
+<script>
+    class Rectangle {
+        constructor(height, width, radius ,area) {
+
+            this.height = height;
+            this.width = width;
+            this.radius = radius;
+            this.area = area;
+        }
+
+        getheight() {
+            return this.height;
+        }
+
+        getwidth() {
+            return this.width;
+        }
+
+        getradius() {
+            return this.radius = (this.height + this.width)*2;
+        }
+
+        getarea() {
+            return this.area = this.height*this.width;
+        }
+    }
+    let rectangle = new Rectangle(200,300);
+    document.write("Chiều dài hình chữ nhật là : " + rectangle.getheight() + "<br>");
+    document.write("Chiều rộng hình chữ nhật là : " + rectangle.getwidth() + "<br>");
+    document.write("Chu vi hình chữ nhật là : " + rectangle.getradius() + "<br>");
+    document.write("Diện tích hình chữ nhật là : " +rectangle.getarea() + "<br>");
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle='#fa4b2a';
+    ctx.fillRect(0,0,200,300);
+
+</script>
+</body>
+</html>

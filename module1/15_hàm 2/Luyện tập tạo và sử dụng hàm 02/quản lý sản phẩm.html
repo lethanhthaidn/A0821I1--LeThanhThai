@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input">Add new Product </label><br>
+<input type="text" placeholder="Nhập tên sản phẩm" id="input">
+<button onclick="addNewProduct()">Add</button>
+<div id="display">
+
+</div>
+</body>
+<script>
+    let productList = ["iphone", "samsung", "nokia", "xiaomi", "sony", "blackberry"];
+
+    function display() {
+        let table = "<table boder='1px' cellpadding='10px'>" + "<tr><th>Product Name</th></tr>";
+
+        for (let i = 0; i < productList.length; i++) {
+            table += "<tr>" +
+                "<td>" + productList[i] + "</td>"+
+                "<td><button onclick='editProduct(" + i + ")'>Edit</button></td>" +
+                "<td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>" +
+                "</tr>"
+        }
+        table += "</table>"
+        document.getElementById("display").innerHTML = table ;
+    }
+    function addNewProduct(){
+        let product = document.getElementById("input").value;
+        if (product != "") {
+            productList.push(product);
+            document.getElementById("input").value = "";
+            display();
+        }
+    }
+    function editProduct(index){
+        productList[index]=prompt("nhap ten moi: ");
+        display();
+    }
+    function deleteProduct(index){
+        let check = confirm("Ban co muon xoa san pham" + productList[index] + "khong?");
+        if (check===true){
+            productList.splice(index,1);
+            display();
+
+        }
+    }
+    display();
+</script>
+</html>
