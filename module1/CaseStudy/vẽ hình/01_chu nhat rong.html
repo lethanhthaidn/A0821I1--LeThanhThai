@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhap chieu rong:"));
+    let b = parseInt(prompt("nhap chieu dai:"));
+    for (let i = 1; i <=a; i++) {
+        for (let j = 1; j <=b; j++) {
+            if (i === 1 || i === a || j === 1 || j === b) {
+                document.write("*&ensp;");
+            } else {
+                document.write("&ensp;&ensp;");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

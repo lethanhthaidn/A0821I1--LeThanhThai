@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h = parseInt(prompt("nhập chiều cao h: "));
+    for (let i=0;i<h;i++){
+        for (let j=h;j>i;j--){
+            document.write("&ensp;&ensp;");
+        }
+        for (let k=0;k<=i;k++){
+            document.write("*&ensp;")
+        }
+        for (let l=1;l<=i;l++){
+            document.write("*&ensp;");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
